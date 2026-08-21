@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Sidebar.css";
 import profileIcon from "../../assets/profileIcon.jpg";
 import { useState } from "react";
@@ -17,10 +18,10 @@ export function Sidebar() {
               <path stroke="currentColor" strokeLinecap="round" strokeWidth="2" d="M5 7h14M5 12h14M5 17h10"/>
             </svg>
           </button>
-          <a href="#" className="brand">
+          <Link to="#" className="brand">
             <img src="https://flowbite.com/docs/images/logo.svg" className="brand__logo" alt="FlowBite Logo" />
             <span className="brand__name">Expense Tracker</span>
-          </a>
+          </Link>
         </div>
         <div className="topnav__right">
           <div className="user-menu">
@@ -42,27 +43,27 @@ export function Sidebar() {
 
                     <ul className="user-menu__list">
                       <li>
-                        <a href="#" className="user-menu__link">
+                        <Link to="#" className="user-menu__link">
                           Dashboard
-                        </a>
+                        </Link>
                       </li>
 
                       <li>
-                        <a href="#" className="user-menu__link">
+                        <Link to="#" className="user-menu__link">
                           Settings
-                        </a>
+                        </Link>
                       </li>
 
                       <li>
-                        <a href="#" className="user-menu__link">
+                        <Link to="#" className="user-menu__link">
                           Profile
-                        </a>
+                        </Link>
                       </li>
 
                       <li>
-                        <a href="#" className="user-menu__link">
+                        <Link to="#" className="user-menu__link">
                           Sign out
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -75,52 +76,52 @@ export function Sidebar() {
 
   <aside id="top-bar-sidebar" className="sidebar" aria-label="Sidebar">
     <div className="sidebar__inner">
-      <a href="https://flowbite.com/" className="sidebar__brand">
+      <Link to="https://flowbite.com/" className="sidebar__brand">
         <img src="https://flowbite.com/docs/images/logo.svg" className="brand__logo" alt="Flowbite Logo" />
         <span className="sidebar__brand-name">Flowbite</span>
-      </a>
+      </Link>
       <ul className="sidebar__nav">
         <li>
-          <a href="#" className="sidebar__link">
+          <Link to="/dashboard" className="sidebar__link">
             <svg className="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6.025A7.5 7.5 0 1 0 17.975 14H10V6.025Z"/><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13.5 3c-.169 0-.334.014-.5.025V11h7.975c.011-.166.025-.331.025-.5A7.5 7.5 0 0 0 13.5 3Z"/></svg>
             <span className="sidebar__link-text">Dashboard</span>
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#" className="sidebar__link">
+          <Link to="/expense" className="sidebar__link">
             <svg className="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6.025A7.5 7.5 0 1 0 17.975 14H10V6.025Z"/><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13.5 3c-.169 0-.334.014-.5.025V11h7.975c.011-.166.025-.331.025-.5A7.5 7.5 0 0 0 13.5 3Z"/></svg>
             <span className="sidebar__link-text">Expenses</span>
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#" className="sidebar__link">
+          <Link to="#" className="sidebar__link">
             <svg className="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6.025A7.5 7.5 0 1 0 17.975 14H10V6.025Z"/><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13.5 3c-.169 0-.334.014-.5.025V11h7.975c.011-.166.025-.331.025-.5A7.5 7.5 0 0 0 13.5 3Z"/></svg>
             <span className="sidebar__link-text">Income</span>
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#" className="sidebar__link">
+          <Link to="#" className="sidebar__link">
             <svg className="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6.025A7.5 7.5 0 1 0 17.975 14H10V6.025Z"/><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13.5 3c-.169 0-.334.014-.5.025V11h7.975c.011-.166.025-.331.025-.5A7.5 7.5 0 0 0 13.5 3Z"/></svg>
             <span className="sidebar__link-text">Budgets</span>
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#" className="sidebar__link">
+          <Link to="#" className="sidebar__link">
             <svg className="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6.025A7.5 7.5 0 1 0 17.975 14H10V6.025Z"/><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13.5 3c-.169 0-.334.014-.5.025V11h7.975c.011-.166.025-.331.025-.5A7.5 7.5 0 0 0 13.5 3Z"/></svg>
             <span className="sidebar__link-text">Analytics</span>
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#" className="sidebar__link">
+          <Link to="#" className="sidebar__link">
             <svg className="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6.025A7.5 7.5 0 1 0 17.975 14H10V6.025Z"/><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13.5 3c-.169 0-.334.014-.5.025V11h7.975c.011-.166.025-.331.025-.5A7.5 7.5 0 0 0 13.5 3Z"/></svg>
             <span className="sidebar__link-text">Categories</span>
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#" className="sidebar__link">
+          <Link to="#" className="sidebar__link">
             <svg className="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6.025A7.5 7.5 0 1 0 17.975 14H10V6.025Z"/><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13.5 3c-.169 0-.334.014-.5.025V11h7.975c.011-.166.025-.331.025-.5A7.5 7.5 0 0 0 13.5 3Z"/></svg>
             <span className="sidebar__link-text">Settings</span>
-          </a>
+          </Link>
         </li>
         
       </ul>
@@ -137,13 +138,13 @@ export function Sidebar() {
           </div>
         </div>
 
-        <a href="#" className="sidebar__bottom-link">
+        <Link to="#" className="sidebar__bottom-link">
           Profile
-        </a>
+        </Link>
 
-        <a href="#" className="sidebar__bottom-link">
+        <Link to="#" className="sidebar__bottom-link">
           Logout
-        </a>
+        </Link>
       </div>
     </div>
   </aside>

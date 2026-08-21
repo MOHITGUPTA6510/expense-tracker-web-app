@@ -1,0 +1,223 @@
+/* Main page */
+
+.expenses-page {
+  margin-left: 256px;
+  margin-top: 70px;
+  padding: 24px;
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+
+/* Header */
+
+.expenses-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.expenses-header h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+  color: #111827;
+}
+
+
+/* Add Expense button */
+
+.add-expense-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+
+  background-color: #2563eb;
+  color: white;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+.add-expense-btn:hover {
+  background-color: #1d4ed8;
+}
+
+
+/* Search */
+
+.search-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.search-section label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.expense-search {
+  width: 100%;
+  padding: 12px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+
+  font-size: 14px;
+  outline: none;
+}
+
+.expense-search:focus {
+  border-color: #2563eb;
+}
+
+
+/* Filters */
+
+.filter-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+
+  color: #374151;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.filter-section select {
+  padding: 9px 12px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+
+  background-color: white;
+  color: #374151;
+
+  cursor: pointer;
+}
+
+
+/* Table */
+
+.expense-table-container {
+  width: 100%;
+  overflow-x: auto;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.expense-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.expense-table th {
+  padding: 14px 16px;
+
+  background-color: #f9fafb;
+
+  text-align: left;
+
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.expense-table td {
+  padding: 14px 16px;
+
+  font-size: 14px;
+  color: #4b5563;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.expense-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.expense-table tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+
+/* Amount */
+
+.expense-amount {
+  font-weight: 600;
+  color: #dc2626 !important;
+}
+
+
+/* Action buttons */
+
+.edit-btn,
+.delete-btn {
+  padding: 6px 10px;
+  margin-right: 6px;
+
+  border-radius: 5px;
+
+  font-size: 13px;
+  cursor: pointer;
+}
+
+
+/* Edit */
+
+.edit-btn {
+  border: 1px solid #d1d5db;
+  background-color: white;
+  color: #374151;
+}
+
+.edit-btn:hover {
+  background-color: #f3f4f6;
+}
+
+
+/* Delete */
+
+.delete-btn {
+  border: 1px solid #fecaca;
+  background-color: #fef2f2;
+  color: #dc2626;
+}
+
+.delete-btn:hover {
+  background-color: #fee2e2;
+}
+
+
+/* Mobile */
+
+@media (max-width: 640px) {
+
+  .expenses-page {
+    margin-left: 0;
+    padding: 16px;
+  }
+
+  .expenses-header {
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .filter-section {
+    flex-wrap: wrap;
+  }
+
+  .filter-section select {
+    flex: 1;
+  }
+}
