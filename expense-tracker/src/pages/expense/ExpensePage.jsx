@@ -1,7 +1,11 @@
 import "./ExpensePage.css";
 import { Sidebar } from "../../components/Sidebar/Sidebar";
+import { AddExpensePage } from "./AddExpensePage";
+import { useNavigate } from "react-router-dom";
 
 export function ExpensePage() {
+  const navigate = useNavigate();
+
   return (
     <>
     <Sidebar />
@@ -11,7 +15,7 @@ export function ExpensePage() {
       <div className="expenses-header">
         <h1>Expenses</h1>
 
-        <button className="add-expense-btn">
+        <button className="add-expense-btn" onClick={() => navigate("/add-expense")}>
           + Add Expense
         </button>
       </div>
