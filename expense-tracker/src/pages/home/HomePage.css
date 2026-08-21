@@ -1,0 +1,16 @@
+.homepage-content {
+  margin-top: 70px;
+  margin-left: 256px;
+  padding: 24px;
+}
+
+.homepage-content h1 {
+  margin: 0 0 10px;
+  font-size: 32px;
+  color:black;
+}
+
+.homepage-content p {
+  margin: 0;
+  color: #284a90;
+}
