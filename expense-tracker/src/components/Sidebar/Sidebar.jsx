@@ -1,5 +1,5 @@
 import "./Sidebar.css";
-import hero from "../../assets/hero.png";
+import profileIcon from "../../assets/profileIcon.jpg";
 import { useState } from "react";
 
 export function Sidebar() {
@@ -26,7 +26,7 @@ export function Sidebar() {
           <div className="user-menu">
             <button type="button" className="user-menu__avatar-btn" aria-expanded="false" data-dropdown-toggle="dropdown-user" onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
               <span className="sr-only">Open user menu</span>
-               <img className="user-menu__avatar" src={hero} alt="user photo" /> 
+               <img className="user-menu__avatar" src={profileIcon} alt="user photo" /> 
             </button>
               {isSidebarOpen && (
                 <div className="user-menu__dropdown">
@@ -127,7 +127,7 @@ export function Sidebar() {
       <div className="sidebar__bottom">
         <div className="sidebar__profile">
           <img
-            src={hero}
+            src={profileIcon}
             alt="Mohit Gupta"
             className="sidebar__profile-img"
           />
