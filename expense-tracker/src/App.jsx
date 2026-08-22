@@ -5,6 +5,8 @@ import { ExpensePage } from './pages/expense/ExpensePage';
 import { AddExpensePage } from './pages/expense/AddExpensePage';
 import { AnalyticPage } from './pages/analytic/AnalyticPage';
 import { BudgetPage } from './pages/budget/BudgetPage';
+import { CategoryPage } from './pages/category/CategoryPage';
+import { AddCategoryPage } from './pages/category/AddCategoryPage';
 import './App.css'
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
       <Route path="/add-expense" element={<AddExpensePage />} />
       <Route path="/analytics" element={<AnalyticPage />} />
       <Route path="/budget" element={<BudgetPage />} />
+      <Route path="/category" element={<CategoryPage />} />
+      <Route path="/add-category" element={<AddCategoryPage />} />
     </Routes>
   );
 }

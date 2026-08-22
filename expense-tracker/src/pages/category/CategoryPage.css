@@ -1,0 +1,269 @@
+/* ============================= */
+/* Category Page */
+/* ============================= */
+
+.category-page {
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 70px;
+}
+
+
+/* ============================= */
+/* Main Content */
+/* ============================= */
+
+.category-main {
+  margin-left: 250px;
+
+  width: calc(100% - 250px);
+
+  padding: 35px;
+
+  box-sizing: border-box;
+}
+
+
+/* ============================= */
+/* Header */
+/* ============================= */
+
+.category-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 30px;
+}
+
+.category-header h1 {
+  margin: 0;
+
+  font-size: 28px;
+  font-weight: 600;
+
+  color: #222;
+}
+
+
+/* ============================= */
+/* Add Category Button */
+/* ============================= */
+
+.add-category-btn {
+  border: none;
+
+  background-color: #4f46e5;
+
+  color: white;
+
+  padding: 12px 20px;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.add-category-btn:hover {
+  background-color: #3730a3;
+}
+
+
+/* ============================= */
+/* Category List */
+/* ============================= */
+
+.category-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 16px;
+}
+
+
+/* ============================= */
+/* Category Card */
+/* ============================= */
+
+.category-card {
+  width: 100%;
+
+  min-height: 75px;
+
+  box-sizing: border-box;
+
+  background-color: #ffffff;
+
+  border: 1px solid #eeeeee;
+
+  border-radius: 14px;
+
+  padding: 18px 22px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+
+  transition: 0.2s;
+}
+
+.category-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.09);
+}
+
+
+/* ============================= */
+/* Left Side */
+/* ============================= */
+
+.category-left {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+}
+
+.category-icon {
+  width: 45px;
+  height: 45px;
+
+  border-radius: 12px;
+
+  background-color: #f5f5ff;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 23px;
+}
+
+.category-left h2 {
+  margin: 0;
+
+  font-size: 17px;
+
+  font-weight: 600;
+
+  color: #222;
+}
+
+
+/* ============================= */
+/* Right Side */
+/* ============================= */
+
+.category-right {
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+}
+
+.category-right span {
+  font-size: 14px;
+
+  color: #777;
+}
+
+
+/* ============================= */
+/* Menu Button */
+/* ============================= */
+
+.category-menu {
+  width: 35px;
+  height: 35px;
+
+  border: none;
+
+  background-color: transparent;
+
+  border-radius: 8px;
+
+  font-size: 22px;
+
+  color: #777;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.category-menu:hover {
+  background-color: #f1f1f1;
+
+  color: #222;
+}
+
+
+/* ============================= */
+/* Responsive */
+/* ============================= */
+
+@media (max-width: 800px) {
+
+  .category-main {
+    margin-left: 0;
+
+    width: 100%;
+
+    padding: 20px;
+  }
+
+}
+
+
+@media (max-width: 550px) {
+
+  .category-header {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 15px;
+  }
+
+  .add-category-btn {
+    width: 100%;
+  }
+
+  .category-card {
+    padding: 15px;
+  }
+
+  .category-right span {
+    font-size: 12px;
+  }
+
+  .category-icon {
+    width: 40px;
+    height: 40px;
+
+    font-size: 20px;
+  }
+
+  .category-left h2 {
+    font-size: 15px;
+  }
+
+}

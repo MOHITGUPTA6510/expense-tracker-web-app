@@ -1,0 +1,341 @@
+/* ============================= */
+/* Add Category Page */
+/* ============================= */
+
+.add-category-page {
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 70px;
+}
+
+
+/* ============================= */
+/* Main Content */
+/* ============================= */
+
+.add-category-main {
+  margin-left: 250px;
+
+  width: calc(100% - 250px);
+
+  padding: 35px;
+
+  box-sizing: border-box;
+}
+
+
+/* ============================= */
+/* Header */
+/* ============================= */
+
+.add-category-header {
+  margin-bottom: 30px;
+}
+
+.add-category-header h1 {
+  margin: 0;
+
+  font-size: 28px;
+  font-weight: 600;
+
+  color: #222;
+}
+
+
+/* ============================= */
+/* Form Card */
+/* ============================= */
+
+.add-category-card {
+  width: 100%;
+  max-width: 650px;
+
+  background-color: #ffffff;
+
+  border: 1px solid #eeeeee;
+
+  border-radius: 15px;
+
+  padding: 30px;
+
+  box-sizing: border-box;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+
+/* ============================= */
+/* Form Group */
+/* ============================= */
+
+.form-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  font-size: 15px;
+
+  font-weight: 600;
+
+  color: #333;
+}
+
+
+/* ============================= */
+/* Input */
+/* ============================= */
+
+.form-group input {
+  width: 100%;
+
+  padding: 13px 15px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #dcdcdc;
+
+  border-radius: 8px;
+
+  outline: none;
+
+  font-size: 15px;
+
+  color: #222;
+
+  transition: 0.2s;
+}
+
+.form-group input:focus {
+  border-color: #4f46e5;
+
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.form-group input::placeholder {
+  color: #aaa;
+}
+
+
+/* ============================= */
+/* Icon Grid */
+/* ============================= */
+
+.icon-grid {
+  display: grid;
+
+  grid-template-columns: repeat(5, 1fr);
+
+  gap: 12px;
+
+  margin-top: 5px;
+}
+
+
+/* ============================= */
+/* Icon Button */
+/* ============================= */
+
+.icon-option {
+  height: 55px;
+
+  border: 1px solid #e5e5e5;
+
+  background-color: #fafafa;
+
+  border-radius: 10px;
+
+  font-size: 25px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.icon-option:hover {
+  background-color: #f1f1ff;
+
+  border-color: #4f46e5;
+}
+
+.selected-icon {
+  background-color: #eeeeff;
+
+  border: 2px solid #4f46e5;
+}
+
+
+/* ============================= */
+/* Preview */
+/* ============================= */
+
+.category-preview {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 18px;
+
+  margin-bottom: 30px;
+
+  background-color: #f8f8ff;
+
+  border-radius: 12px;
+
+  border: 1px solid #eeeeff;
+}
+
+.preview-icon {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background-color: #ffffff;
+
+  border-radius: 12px;
+
+  font-size: 25px;
+}
+
+.preview-label {
+  margin: 0 0 4px;
+
+  font-size: 12px;
+
+  color: #888;
+}
+
+.category-preview h3 {
+  margin: 0;
+
+  font-size: 17px;
+
+  font-weight: 600;
+
+  color: #222;
+}
+
+
+/* ============================= */
+/* Form Buttons */
+/* ============================= */
+
+.form-buttons {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 12px;
+}
+
+
+/* Cancel */
+
+.cancel-btn {
+  padding: 12px 22px;
+
+  border: 1px solid #ddd;
+
+  background-color: #ffffff;
+
+  color: #555;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.cancel-btn:hover {
+  background-color: #f5f5f5;
+}
+
+
+/* Save */
+
+.save-category-btn {
+  padding: 12px 22px;
+
+  border: none;
+
+  background-color: #4f46e5;
+
+  color: #ffffff;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.save-category-btn:hover {
+  background-color: #3730a3;
+}
+
+
+/* ============================= */
+/* Responsive */
+/* ============================= */
+
+@media (max-width: 800px) {
+
+  .add-category-main {
+    margin-left: 0;
+
+    width: 100%;
+
+    padding: 20px;
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .add-category-card {
+    padding: 20px;
+  }
+
+  .icon-grid {
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 8px;
+  }
+
+  .icon-option {
+    height: 48px;
+
+    font-size: 21px;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+  }
+
+  .cancel-btn,
+  .save-category-btn {
+    width: 100%;
+  }
+
+}
