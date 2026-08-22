@@ -3,6 +3,7 @@ import { HomePage } from './pages/home/HomePage';
 import { DashboardPage } from './pages/dashboard/DashboardPage';
 import { ExpensePage } from './pages/expense/ExpensePage';
 import { AddExpensePage } from './pages/expense/AddExpensePage';
+import { AnalyticPage } from './pages/analytic/AnalyticPage';
 import './App.css'
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Route path="/dashboard" element={<DashboardPage />} />
       <Route path="/expense" element={<ExpensePage />} />
       <Route path="/add-expense" element={<AddExpensePage />} />
+      <Route path="/analytics" element={<AnalyticPage />} />
     </Routes>
   );
 }

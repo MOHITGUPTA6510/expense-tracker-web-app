@@ -1,0 +1,213 @@
+.expenses-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  /* width: 100%; */
+  margin-top: 70px;
+  margin-left: 256px;
+  padding: 24px;
+
+}
+
+
+/* Common Card */
+
+.expense-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.expense-card h2 {
+  margin: 0 0 25px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #222;
+}
+
+
+/* ==================== */
+/* Monthly Expenses */
+/* ==================== */
+
+.monthly-card {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.bar-chart {
+  height: 250px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+
+  border-bottom: 2px solid #ddd;
+
+  padding: 0 30px;
+}
+
+.bar-wrapper {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: flex-end;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.bar {
+  width: 40px;
+
+  background-color: #4f46e5;
+
+  border-radius: 6px 6px 0 0;
+
+  min-height: 10px;
+
+  transition: 0.3s;
+}
+
+.bar:hover {
+  background-color: #3730a3;
+}
+
+.month {
+  font-size: 14px;
+  color: #666;
+
+  margin-bottom: -25px;
+}
+
+
+/* ==================== */
+/* Category Expenses */
+/* ==================== */
+
+.category-card {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.donut-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 10px 0 30px;
+}
+
+.donut {
+  width: 180px;
+  height: 180px;
+
+  border-radius: 50%;
+
+  background: conic-gradient(
+    #4f46e5 0% 32%,
+    #22c55e 32% 52%,
+    #f59e0b 52% 70%,
+    #ef4444 70% 85%,
+    #9ca3af 85% 100%
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+.donut::before {
+  content: "";
+
+  position: absolute;
+
+  width: 110px;
+  height: 110px;
+
+  background-color: white;
+
+  border-radius: 50%;
+}
+
+.donut-center {
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.donut-center span {
+  font-size: 14px;
+  color: #666;
+}
+
+.donut-center strong {
+  font-size: 24px;
+  color: #222;
+}
+
+
+/* ==================== */
+/* Category List */
+/* ==================== */
+
+.category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.category-row {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 12px 5px;
+
+  border-bottom: 1px solid #eee;
+}
+
+.category-name {
+  font-size: 15px;
+  color: #444;
+}
+
+.category-percentage {
+  font-size: 15px;
+  font-weight: 600;
+  color: #222;
+}
+
+
+/* ==================== */
+/* Responsive */
+/* ==================== */
+
+@media (max-width: 600px) {
+
+  .expense-card {
+    padding: 18px;
+  }
+
+  .bar-chart {
+    padding: 0 10px;
+  }
+
+  .bar {
+    width: 30px;
+  }
+
+  .donut {
+    width: 150px;
+    height: 150px;
+  }
+
+}
