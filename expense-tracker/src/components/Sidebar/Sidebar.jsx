@@ -43,7 +43,7 @@ export function Sidebar() {
 
                     <ul className="user-menu__list">
                       <li>
-                        <Link to="#" className="user-menu__link">
+                        <Link to="/dashboard" className="user-menu__link">
                           Dashboard
                         </Link>
                       </li>
