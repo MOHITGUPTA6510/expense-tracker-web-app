@@ -1,0 +1,307 @@
+/* ============================= */
+/* Budget Page */
+/* ============================= */
+
+.budget-page {
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 70px;
+}
+
+
+/* ============================= */
+/* Main Content */
+/* ============================= */
+
+.budget-main {
+  margin-left: 250px;
+
+  width: calc(100% - 250px);
+
+  padding: 35px;
+
+  box-sizing: border-box;
+}
+
+
+/* ============================= */
+/* Header */
+/* ============================= */
+
+.budget-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 30px;
+}
+
+.budget-header h1 {
+  margin: 0;
+
+  font-size: 28px;
+  font-weight: 600;
+
+  color: #222;
+}
+
+
+/* ============================= */
+/* Create Budget Button */
+/* ============================= */
+
+.create-budget-btn {
+  border: none;
+
+  background-color: #4f46e5;
+
+  color: white;
+
+  padding: 12px 20px;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.create-budget-btn:hover {
+  background-color: #3730a3;
+}
+
+
+/* ============================= */
+/* Budget List */
+/* ============================= */
+
+.budget-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+
+/* ============================= */
+/* Budget Card */
+/* ============================= */
+
+.budget-card {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  background-color: white;
+
+  padding: 25px;
+
+  border-radius: 14px;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+
+  border: 1px solid #eeeeee;
+}
+
+
+/* ============================= */
+/* Card Header */
+/* ============================= */
+
+.budget-card-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 15px;
+}
+
+.budget-card-header h2 {
+  margin: 0;
+
+  font-size: 18px;
+
+  font-weight: 600;
+
+  color: #222;
+}
+
+.warning-icon {
+  font-size: 20px;
+}
+
+
+/* ============================= */
+/* Amount */
+/* ============================= */
+
+.budget-amount {
+  font-size: 22px;
+
+  font-weight: 600;
+
+  color: #222;
+
+  margin-bottom: 18px;
+}
+
+.budget-amount span {
+  font-size: 16px;
+
+  font-weight: 400;
+
+  color: #777;
+}
+
+
+/* ============================= */
+/* Progress Bar */
+/* ============================= */
+
+.progress-container {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+}
+
+.progress-background {
+  flex: 1;
+
+  height: 12px;
+
+  background-color: #eeeeee;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+
+  background-color: #4f46e5;
+
+  border-radius: 20px;
+
+  transition: width 0.3s ease;
+}
+
+
+/* Exceeded Progress */
+
+.progress-exceeded {
+  background-color: #ef4444;
+}
+
+
+/* Percentage */
+
+.percentage {
+  min-width: 45px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color: #4f46e5;
+}
+
+.percentage-exceeded {
+  color: #ef4444;
+}
+
+
+/* ============================= */
+/* Remaining Text */
+/* ============================= */
+
+.budget-remaining {
+  margin: 12px 0 0;
+
+  font-size: 14px;
+
+  color: #777;
+}
+
+
+/* ============================= */
+/* Warning Text */
+/* ============================= */
+
+.budget-warning {
+  margin: 12px 0 0;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  color: #ef4444;
+}
+
+
+/* ============================= */
+/* Exceeded Card */
+/* ============================= */
+
+.budget-exceeded {
+  border: 1px solid #fecaca;
+}
+
+
+/* ============================= */
+/* Responsive */
+/* ============================= */
+
+@media (max-width: 800px) {
+
+  .budget-main {
+    margin-left: 0;
+
+    width: 100%;
+
+    padding: 20px;
+  }
+
+  .budget-header {
+    align-items: flex-start;
+
+    gap: 15px;
+  }
+
+  .budget-header h1 {
+    font-size: 24px;
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .budget-header {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .create-budget-btn {
+    width: 100%;
+  }
+
+  .budget-card {
+    padding: 20px;
+  }
+
+  .budget-amount {
+    font-size: 20px;
+  }
+
+}
