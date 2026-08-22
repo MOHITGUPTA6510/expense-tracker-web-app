@@ -7,6 +7,7 @@ import { AnalyticPage } from './pages/analytic/AnalyticPage';
 import { BudgetPage } from './pages/budget/BudgetPage';
 import { CategoryPage } from './pages/category/CategoryPage';
 import { AddCategoryPage } from './pages/category/AddCategoryPage';
+import { ProfilePage } from './pages/profile/ProfilePage';
 import './App.css'
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Route path="/budget" element={<BudgetPage />} />
       <Route path="/category" element={<CategoryPage />} />
       <Route path="/add-category" element={<AddCategoryPage />} />
+      <Route path="/profile" element={<ProfilePage />} />
     </Routes>
   );
 }

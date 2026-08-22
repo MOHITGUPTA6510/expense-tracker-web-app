@@ -55,7 +55,7 @@ export function Sidebar() {
                       </li>
 
                       <li>
-                        <Link to="#" className="user-menu__link">
+                        <Link to="/profile" className="user-menu__link">
                           Profile
                         </Link>
                       </li>
@@ -132,7 +132,7 @@ export function Sidebar() {
           </div>
         </div>
 
-        <Link to="#" className="sidebar__bottom-link">
+        <Link to="/profile" className="sidebar__bottom-link">
           Profile
         </Link>
 
