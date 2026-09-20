@@ -22,130 +22,95 @@ export function BudgetPage() {
 
   return (
     <>
-    <Sidebar />
-    <div className="budget-page">
+      <Sidebar />
+      <div className="budget-page">
+        {/* Main Content */}
 
-      {/* Main Content */}
+        <main className="budget-main">
+          {/* Header */}
 
-      <main className="budget-main">
+          <div className="budget-header">
+            <h1>Budgets</h1>
+            <p>this is goood</p>
 
-        {/* Header */}
+            <button className="create-budget-btn">+ Create Budget</button>
+          </div>
 
-        <div className="budget-header">
-          <h1>Budgets</h1>
+          {/* Budget Cards */}
 
-          <button className="create-budget-btn">
-            + Create Budget
-          </button>
-        </div>
+          <div className="budget-list">
+            {budgets.map((budget) => {
+              const percentage = Math.round(
+                (budget.spent / budget.limit) * 100,
+              );
 
+              const exceeded = percentage > 100;
 
-        {/* Budget Cards */}
+              return (
+                <div
+                  className={`budget-card ${exceeded ? "budget-exceeded" : ""}`}
+                  key={budget.name}
+                >
+                  {/* Card Header */}
 
-        <div className="budget-list">
+                  <div className="budget-card-header">
+                    <h2>{budget.name}</h2>
 
-          {budgets.map((budget) => {
-
-            const percentage = Math.round(
-              (budget.spent / budget.limit) * 100
-            );
-
-            const exceeded = percentage > 100;
-
-            return (
-              <div
-                className={`budget-card ${
-                  exceeded ? "budget-exceeded" : ""
-                }`}
-                key={budget.name}
-              >
-
-                {/* Card Header */}
-
-                <div className="budget-card-header">
-
-                  <h2>{budget.name}</h2>
-
-                  {exceeded && (
-                    <span className="warning-icon">
-                      ⚠️
-                    </span>
-                  )}
-
-                </div>
-
-
-                {/* Amount */}
-
-                <div className="budget-amount">
-                  ₹{budget.spent.toLocaleString("en-IN")}
-                  <span>
-                    {" / ₹"}
-                    {budget.limit.toLocaleString("en-IN")}
-                  </span>
-                </div>
-
-
-                {/* Progress Bar */}
-
-                <div className="progress-container">
-
-                  <div className="progress-background">
-
-                    <div
-                      className={`progress-bar ${
-                        exceeded ? "progress-exceeded" : ""
-                      }`}
-                      style={{
-                        width: `${Math.min(percentage, 100)}%`,
-                      }}
-                    ></div>
-
+                    {exceeded && <span className="warning-icon">⚠️</span>}
                   </div>
 
-                  <span
-                    className={`percentage ${
-                      exceeded ? "percentage-exceeded" : ""
-                    }`}
-                  >
-                    {percentage}%
-                  </span>
+                  {/* Amount */}
 
+                  <div className="budget-amount">
+                    ₹{budget.spent.toLocaleString("en-IN")}
+                    <span>
+                      {" / ₹"}
+                      {budget.limit.toLocaleString("en-IN")}
+                    </span>
+                  </div>
+
+                  {/* Progress Bar */}
+
+                  <div className="progress-container">
+                    <div className="progress-background">
+                      <div
+                        className={`progress-bar ${
+                          exceeded ? "progress-exceeded" : ""
+                        }`}
+                        style={{
+                          width: `${Math.min(percentage, 100)}%`,
+                        }}
+                      ></div>
+                    </div>
+
+                    <span
+                      className={`percentage ${
+                        exceeded ? "percentage-exceeded" : ""
+                      }`}
+                    >
+                      {percentage}%
+                    </span>
+                  </div>
+
+                  {/* Remaining / Exceeded */}
+
+                  {exceeded ? (
+                    <p className="budget-warning">
+                      Budget exceeded by ₹
+                      {(budget.spent - budget.limit).toLocaleString("en-IN")}
+                    </p>
+                  ) : (
+                    <p className="budget-remaining">
+                      ₹{(budget.limit - budget.spent).toLocaleString("en-IN")}
+                      remaining
+                    </p>
+                  )}
                 </div>
-
-
-                {/* Remaining / Exceeded */}
-
-                {exceeded ? (
-
-                  <p className="budget-warning">
-                    Budget exceeded by ₹
-                    {(budget.spent - budget.limit).toLocaleString(
-                      "en-IN"
-                    )}
-                  </p>
-
-                ) : (
-
-                  <p className="budget-remaining">
-                    ₹
-                    {(budget.limit - budget.spent).toLocaleString(
-                      "en-IN"
-                    )}
-                    remaining
-                  </p>
-
-                )}
-
-              </div>
-            );
-          })}
-
-        </div>
-
-      </main>
-
-    </div>
+              );
+            })}
+          </div>
+        </main>
+      </div>
     </>
   );
 }
